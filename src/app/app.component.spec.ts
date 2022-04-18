@@ -20,9 +20,15 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('pgn-viewer');
   });
 
-  it(`should render the chess-board component`, () => {
+  it(`should render the chess-board`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const chessBoard = fixture.nativeElement.querySelector('ngx-chess-board');
     expect(chessBoard).toBeTruthy();
+  });
+
+  it(`should have a pgn content textarea`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const pgnContentTextarea = fixture.nativeElement.querySelector('.pgn-content');
+    expect(pgnContentTextarea).toBeTruthy();
   });
 });

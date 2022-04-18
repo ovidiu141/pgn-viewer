@@ -1,0 +1,8 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  .pgn-content {
+      width: fit-content;
+  }
+}
