@@ -4,9 +4,7 @@ import { AppComponent } from './app.component';
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
+      declarations: [AppComponent],
     }).compileComponents();
   });
 
@@ -22,10 +20,9 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('pgn-viewer');
   });
 
-  it('should render title', () => {
+  it(`should render the chess-board component`, () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('pgn-viewer app is running!');
+    const chessBoard = fixture.nativeElement.querySelector('ngx-chess-board');
+    expect(chessBoard).toBeTruthy();
   });
 });
